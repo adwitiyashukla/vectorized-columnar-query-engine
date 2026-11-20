@@ -1,0 +1,27 @@
+[storage]
+row_group_rows = 65536
+dictionary_max_cardinality = 65536
+dictionary_min_repeat_ratio = 2.0
+enable_bit_packing = true
+enable_checksums = true
+
+[execution]
+mode = "vectorized"
+vector_size = 2048
+threads = 0
+enable_simd = true
+enable_zone_maps = true
+enable_column_pruning = true
+enable_predicate_pushdown = true
+enable_join_reorder = true
+hash_table_load_factor = 0.6
+aggregate_initial_buckets = 1024
+
+[csv]
+delimiter = "|"
+has_header = false
+null_string = ""
+
+[bench]
+runs = 5
+warmup = 1
